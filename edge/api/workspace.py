@@ -16,9 +16,9 @@ from frappe.utils import (
 
 @frappe.whitelist()
 def get_holidays_by_list_name(holiday_list_name):
-    """
-    Return holidays for the given Holiday List name
-    """
+	"""
+	Return holidays for the given Holiday List name
+	"""
 	if not holiday_list_name:
 		frappe.throw("Holiday List name is required")
 
@@ -83,9 +83,9 @@ def get_attendance_summary(user_id=None, month=None):
 
 @frappe.whitelist()
 def get_today_checkin_status():
-    """
-    Return today's check-in status for logged-in employee
-    """
+	"""
+	Return today's check-in status for logged-in employee
+	"""
 	employee = frappe.db.get_value("Employee", {"user_id": frappe.session.user}, "name")
 	if not employee:
 		return {"error": "No Employee linked with this user"}
@@ -188,9 +188,9 @@ def get_today_checkin_status():
 
 @frappe.whitelist()
 def mark_checkin(log_type, latitude=None, longitude=None):
-    """
-    Mark check-in or check-out for logged-in employee with location data
-    """
+	"""
+	Mark check-in or check-out for logged-in employee with location data
+	"""
 	employee = frappe.db.get_value("Employee", {"user_id": frappe.session.user}, "name")
 	if not employee:
 		frappe.throw("No Employee linked with this user")
@@ -368,7 +368,7 @@ def get_employee_attendance():
 @frappe.whitelist()
 def get_absent_days(user_id=None):
 	"""
-    Return leave applications active today (with their workflow_state).
+	Return leave applications active today (with their workflow_state).
 	If user_id is provided, restrict to the employee mapped to that user.
 	Otherwise return all leave applications that cover today.
 	"""
@@ -457,7 +457,7 @@ def get_today_anniversaries():
 
 @frappe.whitelist()
 def get_weekly_schedule():
-    """Return weekly shift schedule for logged-in employee (Mon → Sun)"""
+	"""Return weekly shift schedule for logged-in employee (Mon → Sun)"""
 	from datetime import timedelta
 
 	from frappe.utils import getdate
@@ -680,7 +680,7 @@ def set_employee_mood(mood):
 
 @frappe.whitelist()
 def get_employee_mood():
-    """Return today's mood for logged-in employee"""
+	"""Return today's mood for logged-in employee"""
 	user = frappe.session.user
 	employee = frappe.db.get_value("Employee", {"user_id": user}, "name")
 

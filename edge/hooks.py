@@ -242,3 +242,20 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+	{
+		"dt": "Custom HTML Block",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+                    "Availability and Attendance"
+					"Details",
+					"Adherence and Break",
+					"HR Message",
+				],
+			]
+		]
+	}
+]
