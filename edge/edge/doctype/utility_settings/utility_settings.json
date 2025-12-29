@@ -5,7 +5,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "dashboard_message"
+  "dashboard_message",
+  "job_offer_email_template",
+  "job_offer_print_format"
  ],
  "fields": [
   {
@@ -13,13 +15,25 @@
    "fieldtype": "HTML",
    "label": "Dashboard Message",
    "options": "<p> Dashboard Messages</p>"
+  },
+  {
+   "fieldname": "job_offer_email_template",
+   "fieldtype": "Link",
+   "label": "Job Offer Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "job_offer_print_format",
+   "fieldtype": "Link",
+   "label": "Job Offer Print Format",
+   "options": "Print Format"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-12-10 15:44:53.878967",
+ "modified": "2025-12-24 14:40:24.453322",
  "modified_by": "Administrator",
  "module": "Edge",
  "name": "Utility Settings",
