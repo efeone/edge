@@ -1,4 +1,4 @@
-frappe.pages['project-management-t'].on_page_load = function (wrapper) {
+frappe.pages['project-management-tool'].on_page_load = function (wrapper) {
 	var page = frappe.ui.make_app_page({
 		parent: wrapper,
 		title: 'Project Management Tool',
@@ -97,7 +97,7 @@ function refresh_projects(page, page_num = null) {
 	const from_date = page.fields_dict.from_date.get_value();
 	const to_date = page.fields_dict.to_date.get_value();
 	frappe.call({
-		method: "edge.edge.page.project_management_t.project_management_t.get_project",
+		method: "edge.edge.page.project_management_tool.project_management_tool.get_project",
 		args: {
 			status: selected_status,
 			project: project_name,
@@ -111,7 +111,7 @@ function refresh_projects(page, page_num = null) {
 		},
 		callback: (r) => {
 			if (r.message && r.message.length > 0) {
-				$(frappe.render_template("project_management_t", { project_list: r.message })).appendTo(page.body); 
+				$(frappe.render_template("project_management_tool", { project_list: r.message })).appendTo(page.body); 
 				page.body.find(".showTask").on("click", function () {
 					var project_id = $(this).attr("project");
 					frappe.route_options = {
