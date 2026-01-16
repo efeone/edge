@@ -44,7 +44,7 @@ app_license = "mit"
 
 # include js in doctype views
 doctype_js = {
-    "Job Offer": "edge/custom_scripts/job_offer/job_offer.js"
+	"Job Offer": "edge/custom_scripts/job_offer/job_offer.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -252,7 +252,7 @@ fixtures = [
 				"name",
 				"in",
 				[
-                    "Availability and Attendance"
+					"Availability and Attendance",
 					"Details",
 					"Adherence and Break",
 					"HR Message",
