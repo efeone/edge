@@ -85,12 +85,13 @@ doctype_js = {
 # ------------
 
 # before_install = "edge.install.before_install"
-# after_install = "edge.install.after_install"
+after_install = "edge.setup.after_install"
+after_migrate = "edge.setup.after_migrate"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "edge.uninstall.before_uninstall"
+before_uninstall = "edge.setup.before_uninstall"
 # after_uninstall = "edge.uninstall.after_uninstall"
 
 # Integration Setup
